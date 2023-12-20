@@ -30,6 +30,7 @@ dependencies = [
 [[package]]
 name = "token_limiter"
 version = "0.1.0"
+source = "git+https://github.com/TristanStreich/token_limiter#e1e1681c98643345ac9bb63c26b25d914b0067b5"
 dependencies = [
  "quote",
 ]

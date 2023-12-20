@@ -13,7 +13,13 @@ Rust tokens can be broken down into 4 categories
 
 ## Usage
 
-See example_usage
+See [example_usage](https://github.com/TristanStreich/token_limiter/tree/main/example_usage)
+
+Add this to your dependencies with
+```toml
+[dependencies]
+token_limiter = { git = "https://github.com/TristanStreich/token_limiter" }
+```
 
 Add the following block to the top of your main.rs file
 ```rust

@@ -6,4 +6,4 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-token_limiter = {path="../"}
+token_limiter = { git = "https://github.com/TristanStreich/token_limiter" }
