@@ -30,6 +30,7 @@ dependencies = [
 [[package]]
 name = "token_limiter"
 version = "0.1.0"
+source = "git+https://github.com/TristanStreich/token_limiter#6625944e1baf29f4df0853dbbb4d25423120ed6a"
 dependencies = [
  "proc-macro2",
  "quote",
