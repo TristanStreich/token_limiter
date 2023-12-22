@@ -1,4 +1,5 @@
-use proc_macro::{TokenStream, TokenTree};
+#![feature(proc_macro_diagnostic)]
+use proc_macro::{Diagnostic, Level, Span, TokenStream, TokenTree};
 
 macro_rules! error {
     ($file:ident, $($msg:tt)*) => {{
@@ -23,6 +24,13 @@ pub fn limit(args: TokenStream, mut file: TokenStream) -> TokenStream {
             "This file contains {num_tokens} tokens which is greater than the max of {max_tokens}"
         )
     }
+
+    Diagnostic::spanned(
+        Span::call_site(),
+        Level::Note,
+        format!("File currently contains {num_tokens} tokens"),
+    )
+    .emit();
 
     file
 }
